@@ -3,6 +3,7 @@ body{
     background-image: url(Imagens/wallpaper001.jpg);
 }
 div.quadrado{
+    /* Colocando uma do lado da outra */
     display: inline-block;
     border: 2px solid black;
     width: 300px;
@@ -10,6 +11,7 @@ div.quadrado{
     border-radius: 10px;
     background-color: lightgray;
 }
+/* Formas de usar o background */
 div#q1{
     background-color: aquamarine;
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralizando verticalmente</title>
+    <style>
+        #conteiner{
+            /* Toda caixa geralmente jávem com o posicionamento relative, feito apenas para visualização */
+            position: relative;
+            background-image: url(Imagens/target001.png);
+            background-size: 100% 100%;
+            /* 96% em relação a view port, importante */
+            height: 96vh;
+            background-color: blueviolet;
+            padding: 10px;
+        }
+        #conteudo{
+            background-image: url(Imagens/target001.png);
+            background-size: 100% 100%;
+            /* A caixa se torna posivel de editar utilizando, (Left) (Top) */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            height: 200px;
+            width: 400px;
+            background-color: darkorange;
+            /* Vamos transformar a caixa para que possamos mudar suas configurações */
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="conteiner">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>

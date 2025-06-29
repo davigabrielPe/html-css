@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+ :root{
+    --fonte1: Verdana , geneva , tahoma , sans-serif;
+    --fonte2: "Sriracha", cursive;
+    --fonte3: "Passion One", sans-serif;
+ }
 *{
     padding: 0px;
     margin: 0px;
@@ -16,7 +23,9 @@ header{
 }
 
 header > h1 {
+    font-family: var(--fonte3);
     padding-top: 50px;
+    font-size: 4em;
     /* text-transform: uppercase; Para Deixar toda a frase Maiuscula*/
     font-variant: small-caps;
     /* O começo de cada frase fica maiuscula. */
@@ -24,6 +33,7 @@ header > h1 {
 
 header > p {
     padding-bottom: 50px;
+    text-decoration: none;
 }
 header  a, footer a{
     color: #fff;
@@ -34,6 +44,7 @@ header a:hover, footer a:hover{
     text-decoration: underline;
 }
 section{
+    font-family: var(--fonte2);
     padding: 10vh 0px 10vh 30px ;
     /* Espaçamento entre as linhas */
     line-height: 2em;
@@ -49,7 +60,8 @@ section.imagem{
     color: #fff;
 }
 section.imagem > p{
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.548);
 }
 footer{

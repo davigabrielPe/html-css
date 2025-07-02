@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usso de tabelas grandes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            /* A posição tem que estar relativa */
+            position: relative;
+            width: 500px;
+            border-collapse: collapse;
+        }
+        thead,tfoot{
+            background-color: gray;
+            color: #fff;
+        }
+        /* Configuração para deixar a barra fixa, a tabela deve estar relativa */
+        thead > tr >th{
+                position: sticky;
+                /* Em relação ao topo */
+                top: -1px;
+                background-color: gray;
+        }
+        /* Posso usar (odd,2n-1)-impar (even,2n)-Par */
+        tbody > :nth-child(2n) {
+            background-color: lightgray;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .num{
+            text-align: right;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(199, 199, 199);
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- Anatomia para tabelas grandes
+     *Table
+     Caption
+     *Thead
+        tr,td,td
+     *Tbody
+         tr,td,td
+     *Tfoot
+        tr,td,td
+    -->
+        <table>
+            <caption>População das Unidades Federativas</caption>
+            <thead>
+                <!-- Para dizer Que o titulo se refencia a coluna ussa essa tag -->
+                    <tr>
+                        <th scope="col">Estado</th>
+                        <th scope="col" style="width: 50px;">População</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+               <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+                <td>São Paulo</td>
+                <td  class ="num">41.262.199</td>
+                <tr>
+                    <td>Minas-Gerais</td>
+                    <td class ="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class ="num">15.989.929</td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr> 
+                    <!-- utilize Row para referenciar a linha vertical -->
+                    <th scope="row">Total de habitantes</th>
+                    <td><strong>118.111.657</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam quo saepe repudiandae ullam odit deleniti soluta itaque distinctio esse illum quisquam facilis, deserunt, molestias in aliquid quaerat, unde quibusdam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos facere in quae assumenda quasi, molestiae odit temporibus quis, incidunt dignissimos quia ad exercitationem harum minima laboriosam praesentium tempore aperiam dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste minus, omnis, iure molestiae officia est, at repudiandae veniam dolores id ratione dolore cumque aut suscipit velit labore commodi inventore possimus.v Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem eveniet quasi nostrum perferendis laboriosam culpa asperiores, soluta fugiat reprehenderit tempora non doloribus nobis blanditiis expedita repellendus suscipit totam eaque magni?</p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam quo saepe repudiandae ullam odit deleniti soluta itaque distinctio esse illum quisquam facilis, deserunt, molestias in aliquid quaerat, unde quibusdam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos facere in quae assumenda quasi, molestiae odit temporibus quis, incidunt dignissimos quia ad exercitationem harum minima laboriosam praesentium tempore aperiam dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste minus, omnis, iure molestiae officia est, at repudiandae veniam dolores id ratione dolore cumque aut suscipit velit labore commodi inventore possimus.v Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem eveniet quasi nostrum perferendis laboriosam culpa asperiores, soluta fugiat reprehenderit tempora non doloribus nobis blanditiis expedita repellendus suscipit totam eaque magni?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam quo saepe repudiandae ullam odit deleniti soluta itaque distinctio esse illum quisquam facilis, deserunt, molestias in aliquid quaerat, unde quibusdam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos facere in quae assumenda quasi, molestiae odit temporibus quis, incidunt dignissimos quia ad exercitationem harum minima laboriosam praesentium tempore aperiam dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste minus, omnis, iure molestiae officia est, at repudiandae veniam dolores id ratione dolore cumque aut suscipit velit labore commodi inventore possimus.v Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem eveniet quasi nostrum perferendis laboriosam culpa asperiores, soluta fugiat reprehenderit tempora non doloribus nobis blanditiis expedita repellendus suscipit totam eaque magni?</p>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam quo saepe repudiandae ullam odit deleniti soluta itaque distinctio esse illum quisquam facilis, deserunt, molestias in aliquid quaerat, unde quibusdam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos facere in quae assumenda quasi, molestiae odit temporibus quis, incidunt dignissimos quia ad exercitationem harum minima laboriosam praesentium tempore aperiam dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste minus, omnis, iure molestiae officia est, at repudiandae veniam dolores id ratione dolore cumque aut suscipit velit labore commodi inventore possimus.v Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem eveniet quasi nostrum perferendis laboriosam culpa asperiores, soluta fugiat reprehenderit tempora non doloribus nobis blanditiis expedita repellendus suscipit totam eaque magni?</p>
+</body>
+</html>
